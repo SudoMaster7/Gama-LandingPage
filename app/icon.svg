@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GAMA Embalagens">
+  <!-- Favicon da GAMA Embalagens.
+       Adaptação do símbolo (caixa + G): em tamanhos pequenos a caixa
+       isométrica vira ruído, então fica o G sobre o verde da marca — o
+       elemento reconhecível da assinatura. -->
+  <rect width="64" height="64" rx="13" fill="#2e8b40"/>
+  <path
+    d="M41.5 25.2a11.6 11.6 0 1 0 2.1 10.2H32.9v-6.6h18.4v3.6a19.3 19.3 0 1 1-4.3-12.1z"
+    fill="#ffffff"
+    transform="translate(-7.5 0)"
+  />
+</svg>

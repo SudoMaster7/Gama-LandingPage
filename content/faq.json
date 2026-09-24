@@ -1,0 +1,26 @@
+[
+  {
+    "q": "Quais produtos posso consultar?",
+    "a": "Você pode consultar bobina fundo estrela, sacolas, filme PVC e filme stretch. Veja também as demais opções publicadas no catálogo."
+  },
+  {
+    "q": "Vocês atendem minha cidade?",
+    "a": "Informe sua cidade e estado na solicitação. A equipe confirmará a possibilidade e as condições de atendimento."
+  },
+  {
+    "q": "Existe quantidade mínima?",
+    "a": "A quantidade mínima deve ser confirmada para o produto e a condição comercial solicitados."
+  },
+  {
+    "q": "Posso pedir orçamento de vários produtos?",
+    "a": "Sim. Selecione os itens de seu interesse e envie uma única solicitação."
+  },
+  {
+    "q": "Não sei a especificação exata. Como solicitar?",
+    "a": "Descreva o uso pretendido e as informações que já possui. A equipe poderá verificar as opções disponíveis."
+  },
+  {
+    "q": "Qual é o prazo de entrega?",
+    "a": "O prazo será informado na cotação, conforme produto, disponibilidade e local de entrega."
+  }
+]

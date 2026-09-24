@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "supermercados",
+    "name": "Supermercados e mercados",
+    "short": "Reposição dos itens usados na operação da loja.",
+    "entryProducts": ["bobina-fundo-estrela", "sacolas", "filme-pvc", "filme-stretch"],
+    "status": "validado"
+  },
+  {
+    "slug": "hortifruti",
+    "name": "Hortifrutis e sacolões",
+    "short": "Acondicionamento de hortifrúti na banca e no caixa.",
+    "entryProducts": ["bobina-fundo-estrela", "sacolas"],
+    "status": "a validar"
+  },
+  {
+    "slug": "alimentacao",
+    "name": "Restaurantes, padarias e alimentação",
+    "short": "Embalagem e proteção no preparo e no balcão.",
+    "entryProducts": ["filme-pvc", "sacolas"],
+    "status": "a validar"
+  },
+  {
+    "slug": "comercio",
+    "name": "Lojas e pequenos negócios",
+    "short": "Entrega das compras ao cliente final.",
+    "entryProducts": ["sacolas"],
+    "status": "a validar"
+  },
+  {
+    "slug": "industria-logistica",
+    "name": "Indústria, depósitos e logística",
+    "short": "Envolvimento e unitização de cargas.",
+    "entryProducts": ["filme-stretch"],
+    "status": "a validar"
+  },
+  {
+    "slug": "distribuidores",
+    "name": "Distribuidores e atacadistas",
+    "short": "Compra para abastecimento ou revenda.",
+    "entryProducts": [],
+    "status": "a validar"
+  }
+]

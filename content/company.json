@@ -1,0 +1,23 @@
+{
+  "_nota": "Campos com null ou 'a validar' NÃO renderizam no site (regra de lib/content.ts) e quebram o build de produção se forem publicados como texto. Preencher com os dados oficiais da GAMA antes do go-live. Ver CHECKLIST-GAMA.md.",
+  "brandName": "GAMA Embalagens",
+  "tagline": "Comércio de embalagens",
+  "activity": "comercio",
+  "activityLabel": "Comércio e distribuição de embalagens",
+  "legalName": null,
+  "cnpj": null,
+  "address": null,
+  "city": null,
+  "uf": null,
+  "whatsapp": null,
+  "whatsappDisplay": null,
+  "email": null,
+  "phone": null,
+  "openingHours": null,
+  "coverage": null,
+  "siteUrl": "https://www.gamaembalagens.com.br",
+  "about": {
+    "lead": null,
+    "body": null
+  }
+}

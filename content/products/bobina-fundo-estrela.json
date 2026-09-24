@@ -1,0 +1,34 @@
+{
+  "slug": "bobina-fundo-estrela",
+  "name": "Bobina fundo estrela",
+  "family": "Sacos e bobinas",
+  "short": "Bobina picotada com fundo estrela para acondicionamento no balcão e no caixa.",
+  "seoTitle": "Bobina fundo estrela | GAMA Embalagens",
+  "seoDescription": "Consulte as opções de bobina fundo estrela da GAMA Embalagens. Informe medida, quantidade e aplicação para solicitar uma cotação.",
+  "description": "Consulte as opções de bobina fundo estrela da GAMA. Informe medida, quantidade e aplicação para verificar a opção disponível para seu negócio.",
+  "segments": ["supermercados", "hortifruti", "comercio"],
+  "images": [
+    {
+      "src": null,
+      "alt": "Bobina de fundo estrela"
+    }
+  ],
+  "variants": [],
+  "specSchema": [
+    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
+    { "key": "altura_cm", "label": "Altura", "unit": "cm" },
+    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
+    { "key": "unidades_por_bobina", "label": "Unidades por bobina", "unit": "un" }
+  ],
+  "supplyUnit": null,
+  "material": null,
+  "applications": [],
+  "limitations": [],
+  "quoteQuestions": [
+    "Qual medida de bobina você utiliza hoje?",
+    "Em que ponto da operação ela é usada?",
+    "Qual quantidade deseja por pedido?"
+  ],
+  "faq": [],
+  "related": ["sacolas", "filme-pvc"]
+}

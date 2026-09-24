@@ -1,0 +1,35 @@
+{
+  "slug": "sacolas",
+  "name": "Sacolas",
+  "family": "Sacos e bobinas",
+  "short": "Sacolas para entrega das compras ao cliente final.",
+  "seoTitle": "Sacolas para comércio e supermercado | GAMA Embalagens",
+  "seoDescription": "Conheça as opções de sacolas comercializadas pela GAMA Embalagens. Envie medida, apresentação e quantidade para receber uma cotação.",
+  "description": "Encontre as opções de sacolas comercializadas pela GAMA. Envie sua necessidade de medida, apresentação e quantidade para cotação.",
+  "segments": ["supermercados", "comercio", "hortifruti", "alimentacao"],
+  "images": [
+    {
+      "src": null,
+      "alt": "Sacolas plásticas"
+    }
+  ],
+  "variants": [],
+  "specSchema": [
+    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
+    { "key": "altura_cm", "label": "Altura", "unit": "cm" },
+    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
+    { "key": "cor", "label": "Cor", "unit": null },
+    { "key": "unidades_por_fardo", "label": "Unidades por fardo", "unit": "un" }
+  ],
+  "supplyUnit": null,
+  "material": null,
+  "applications": [],
+  "limitations": [],
+  "quoteQuestions": [
+    "Qual a finalidade de uso?",
+    "Qual medida você utiliza hoje?",
+    "Qual volume de compra por período?"
+  ],
+  "faq": [],
+  "related": ["bobina-fundo-estrela", "filme-pvc"]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "filme-stretch",
+  "name": "Filme stretch",
+  "family": "Filmes",
+  "short": "Filme stretch para envolvimento e unitização de cargas paletizadas.",
+  "seoTitle": "Filme stretch para paletes e cargas | GAMA Embalagens",
+  "seoDescription": "Solicite uma cotação de filme stretch na GAMA Embalagens. Informe largura, espessura, aplicação manual ou em máquina e quantidade.",
+  "description": "Solicite uma cotação de filme stretch conforme a aplicação da sua operação. Compartilhe as especificações utilizadas ou descreva sua necessidade.",
+  "segments": ["industria-logistica", "supermercados", "distribuidores"],
+  "images": [
+    {
+      "src": null,
+      "alt": "Rolo de filme stretch transparente"
+    }
+  ],
+  "variants": [],
+  "specSchema": [
+    { "key": "largura_mm", "label": "Largura", "unit": "mm" },
+    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
+    { "key": "peso_liquido_kg", "label": "Peso líquido", "unit": "kg" },
+    { "key": "peso_tubete_kg", "label": "Peso do tubete", "unit": "kg" },
+    { "key": "aplicacao", "label": "Aplicação", "unit": null }
+  ],
+  "supplyUnit": null,
+  "material": null,
+  "applications": [],
+  "limitations": [],
+  "quoteQuestions": [
+    "A aplicação é manual ou em máquina?",
+    "Qual largura e espessura você usa hoje?",
+    "Quantos rolos por pedido?"
+  ],
+  "faq": [],
+  "related": ["filme-pvc", "sacolas"]
+}

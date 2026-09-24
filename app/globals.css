@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
+/*
+ * GAMA Embalagens — tokens de marca
+ * Verde/preto/branco extraídos do manual de marca (WhatsApp Image 2026-09-17).
+ * Substituir pelos valores oficiais quando a GAMA enviar o vetor da marca.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gama-verde: #2e8b40;
+  --gama-verde-escuro: #1f6a2d;
+  --gama-verde-claro: #e8f3ea;
+  --gama-preto: #0d0f0e;
+  --gama-branco: #ffffff;
+  --gama-filme: #f2f5f3;
+  --gama-linha: #d7dfd9;
+  --gama-texto: #1c211e;
+  --gama-texto-suave: #55605a;
+
+  --background: var(--gama-branco);
+  --foreground: var(--gama-texto);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-gama-verde: var(--gama-verde);
+  --color-gama-verde-escuro: var(--gama-verde-escuro);
+  --color-gama-verde-claro: var(--gama-verde-claro);
+  --color-gama-preto: var(--gama-preto);
+  --color-gama-filme: var(--gama-filme);
+  --color-gama-linha: var(--gama-linha);
+  --color-gama-texto: var(--gama-texto);
+  --color-gama-suave: var(--gama-texto-suave);
+
+  --font-sans: var(--font-gama-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-gama-sans), system-ui, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco visível em todos os controles — requisito de acessibilidade do briefing */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--gama-verde);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Faixa diagonal translúcida — "filme" (hero e CTA final, uso parcimonioso).
+   Discreta o bastante para não competir com o texto por cima. */
+.gama-filme-bands {
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(46, 139, 64, 0.035) 0px,
+    rgba(46, 139, 64, 0.035) 18px,
+    transparent 18px,
+    transparent 72px
+  );
+}
+
+/* Conteúdo do hero fica acima das faixas, com leve véu para garantir leitura */
+.gama-hero-text {
+  position: relative;
+  z-index: 1;
 }
