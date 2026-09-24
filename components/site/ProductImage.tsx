@@ -1,14 +1,20 @@
 "use client";
 
-import { Package } from "lucide-react";
 import type { Product } from "@/lib/content";
 import { isPublishable } from "@/lib/content";
+import { ProductIllustration } from "@/components/site/ProductIllustration";
 import { cn } from "@/lib/utils";
 
 /**
- * Imagem do produto. Enquanto a GAMA não enviar as fotos reais, exibe um
- * espaço neutro identificado — nunca uma foto de banco de imagens que sugira
- * produto ou estrutura que a empresa não possui.
+ * Imagem do produto, em três estados:
+ *
+ *   1. Foto real cadastrada  -> mostra a foto.
+ *   2. Sem foto              -> ilustração vetorial da marca (ProductIllustration).
+ *   3. (nenhum outro)        -> a ilustração sempre tem um fallback genérico.
+ *
+ * Nunca usa foto de banco de imagens: seria sugerir produto ou estrutura que a
+ * GAMA pode não possuir. A ilustração é claramente um desenho, não engana
+ * ninguém, e sai de cena sozinha quando a foto real chega ao JSON do produto.
  */
 export function ProductImage({
   product,
@@ -26,14 +32,19 @@ export function ProductImage({
     return (
       <div
         className={cn(
-          "flex flex-col items-center justify-center gap-2 bg-[var(--gama-filme)] text-[var(--gama-suave)]",
+          "flex items-center justify-center bg-[var(--gama-filme)] p-3",
           className,
         )}
         role="img"
-        aria-label={`Foto de ${product.name} ainda não disponível`}
+        aria-label={`Ilustração de ${product.name}. Foto real ainda não disponível.`}
+        title={product.name}
       >
-        <Package className="h-10 w-10 opacity-40" aria-hidden />
-        <span className="px-3 text-center text-xs font-medium">{product.name}</span>
+        <ProductIllustration
+          slug={product.slug}
+          name={product.name}
+          family={product.family}
+          className="h-full w-full"
+        />
       </div>
     );
   }
