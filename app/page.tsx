@@ -11,17 +11,39 @@ import { company, contact, products } from "@/lib/content";
 export default function HomePage() {
   return (
     <>
-      {/* 6.2 Primeira dobra */}
-      <section className="gama-filme-bands border-b border-[var(--gama-linha)] bg-[var(--gama-filme)]">
+      {/* 6.2 Primeira dobra — fachada real da GAMA ao fundo */}
+      <section className="relative isolate overflow-hidden border-b border-[var(--gama-linha)] bg-[var(--gama-preto)]">
+        {/* Foto da sede. aria-hidden: é ambientação, não conteúdo. */}
+        <div className="absolute inset-0 -z-20">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/empresa/fachada.webp"
+            alt=""
+            aria-hidden
+            className="h-full w-full object-cover object-center"
+            fetchPriority="high"
+          />
+        </div>
+
+        {/*
+          Véu escuro em gradiente: garante contraste do texto sobre a foto.
+          Mais fechado à esquerda, onde fica o texto; mais aberto à direita,
+          para a fachada continuar reconhecível.
+        */}
+        <div
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/55"
+          aria-hidden
+        />
+
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] text-[var(--gama-verde-escuro)] uppercase">
+            <p className="mb-3 text-sm font-bold tracking-[0.18em] text-[var(--gama-verde-claro)] uppercase">
               {company.activityLabel}
             </p>
-            <h1 className="text-4xl leading-[1.1] font-extrabold text-balance sm:text-5xl">
+            <h1 className="text-4xl leading-[1.1] font-extrabold text-balance text-white sm:text-5xl">
               Embalagens para a rotina do seu negócio.
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--gama-suave)]">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               Conheça bobina fundo estrela, sacolas, filme PVC e filme stretch. Conte à
               GAMA o que sua empresa precisa e solicite uma cotação.
             </p>
@@ -29,11 +51,16 @@ export default function HomePage() {
               <ButtonLink href="/orcamento" size="lg">
                 Solicitar orçamento
               </ButtonLink>
-              <ButtonLink href="/produtos" variant="outline" size="lg">
+              <ButtonLink
+                href="/produtos"
+                variant="outline"
+                size="lg"
+                className="border-white/70 bg-white/5 text-white hover:bg-white/15"
+              >
                 Conhecer os produtos
               </ButtonLink>
             </div>
-            <p className="mt-5 max-w-lg text-sm text-[var(--gama-suave)]">
+            <p className="mt-5 max-w-lg text-sm text-white/70">
               Não sabe a medida ou a quantidade ideal? Descreva sua aplicação para a
               equipe avaliar.
             </p>
@@ -44,7 +71,7 @@ export default function HomePage() {
             {products.map((p, i) => (
               <li
                 key={p.slug}
-                className="overflow-hidden rounded-lg border border-[var(--gama-linha)] bg-white"
+                className="overflow-hidden rounded-lg border border-white/15 bg-white/95 shadow-lg backdrop-blur-sm"
               >
                 <Link href={`/produtos/${p.slug}`} className="block">
                   <ProductImage product={p} className="h-28 w-full" priority={i < 2} />
