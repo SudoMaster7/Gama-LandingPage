@@ -31,8 +31,8 @@ export default function HomePage() {
           para a fachada continuar reconhecível.
         */}
         <div
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/55"
-          aria-hidden
+            className="absolute inset-0 -z-10 bg-gradient-to-r from-emerald-950/95 via-green-950/80 to-black/75"
+            aria-hidden="true"
         />
 
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
