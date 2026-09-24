@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { FloatingContact } from "@/components/site/FloatingContact";
 import { company, contact } from "@/lib/content";
 
 const montserrat = Montserrat({
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
-        <WhatsAppButton position="floating" />
+        <FloatingContact />
         <OrganizationJsonLd />
       </body>
     </html>

@@ -9,7 +9,8 @@ type EventName =
   | "start_quote"
   | "submit_quote_success"
   | "submit_quote_error"
-  | "click_whatsapp";
+  | "click_whatsapp"
+  | "click_orcamento";
 
 type Props = Record<string, string | number | boolean | undefined>;
 

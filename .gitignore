@@ -42,3 +42,6 @@ next-env.d.ts
 
 # leads gravados localmente (fallback de desenvolvimento)
 .leads/
+
+# indice de produtos gerado por scripts/gerar-produtos.mjs
+content/products.generated.ts

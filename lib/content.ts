@@ -10,10 +10,8 @@
 import companyRaw from "@/content/company.json";
 import segmentsRaw from "@/content/segments.json";
 import faqRaw from "@/content/faq.json";
-import bobina from "@/content/products/bobina-fundo-estrela.json";
-import sacolas from "@/content/products/sacolas.json";
-import filmePvc from "@/content/products/filme-pvc.json";
-import filmeStretch from "@/content/products/filme-stretch.json";
+import familiesRaw from "@/content/families.json";
+import { produtosBrutos } from "@/content/products.generated";
 import { isPublishable, pub, pubList } from "@/lib/publishable";
 
 export { isPublishable, pub, pubList };
@@ -62,7 +60,41 @@ export type Company = typeof companyRaw;
 
 export const company = companyRaw as Company;
 
-export const products: Product[] = [bobina, sacolas, filmePvc, filmeStretch] as unknown as Product[];
+/**
+ * Catálogo montado automaticamente a partir de content/products/*.json
+ * (ver scripts/gerar-produtos.mjs). Para incluir um produto novo basta criar
+ * o arquivo JSON na pasta — nenhum código precisa ser alterado.
+ *
+ * A ordem de exibição segue content/families.json. Família não listada lá
+ * aparece no fim, em ordem alfabética, para nunca sumir do catálogo.
+ */
+const ordemFamilias: string[] = (familiesRaw as { name: string }[]).map((f) => f.name);
+
+function pesoFamilia(familia: string): number {
+  const i = ordemFamilias.indexOf(familia);
+  return i === -1 ? ordemFamilias.length : i;
+}
+
+export const products: Product[] = (produtosBrutos as unknown as Product[])
+  .slice()
+  .sort((a, b) => {
+    const pa = pesoFamilia(a.family);
+    const pb = pesoFamilia(b.family);
+    if (pa !== pb) return pa - pb;
+    if (a.family !== b.family) return a.family.localeCompare(b.family, "pt-BR");
+    return a.name.localeCompare(b.name, "pt-BR");
+  });
+
+/** Famílias que realmente têm produto publicado, na ordem comercial. */
+export const families: { name: string; products: Product[] }[] = (() => {
+  const mapa = new Map<string, Product[]>();
+  for (const p of products) {
+    const lista = mapa.get(p.family) ?? [];
+    lista.push(p);
+    mapa.set(p.family, lista);
+  }
+  return [...mapa.entries()].map(([name, items]) => ({ name, products: items }));
+})();
 
 export const allSegments = segmentsRaw as Segment[];
 
