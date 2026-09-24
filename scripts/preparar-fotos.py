@@ -75,18 +75,44 @@ def salvar_com_peso(im: Image.Image, destino: Path) -> int:
     return 60
 
 
+def ja_esta_pronta(caminho: Path) -> bool:
+    """
+    True quando o arquivo já é uma saída deste script: WebP na dimensão exata
+    e dentro do peso alvo. Reprocessar comprimiria de novo uma imagem já
+    comprimida, perdendo qualidade sem nenhum ganho.
+    """
+    if caminho.suffix.lower() != ".webp":
+        return False
+    if caminho.stat().st_size > PESO_ALVO:
+        return False
+    try:
+        with Image.open(caminho) as im:
+            return im.size == (LARGURA, ALTURA)
+    except Exception:
+        return False
+
+
 def main() -> int:
     if not PASTA.exists():
         print(f"\n[fotos] A pasta {PASTA.relative_to(RAIZ)} não existe.\n")
         return 1
 
-    imagens = sorted(
+    candidatas = sorted(
         f for f in PASTA.iterdir()
         if f.is_file() and f.suffix.lower() in EXTENSOES
     )
 
+    imagens = [f for f in candidatas if not ja_esta_pronta(f)]
+    puladas = [f.name for f in candidatas if ja_esta_pronta(f)]
+
+    if puladas:
+        print(
+            "\n[fotos] Já estavam na especificação (não foram tocadas): "
+            + ", ".join(puladas)
+        )
+
     if not imagens:
-        print(f"\n[fotos] Nenhuma imagem em {PASTA.relative_to(RAIZ)}.\n")
+        print(f"\n[fotos] Nada novo para preparar em {PASTA.relative_to(RAIZ)}.\n")
         return 0
 
     slugs = {f.stem for f in FICHAS.glob("*.json")}

@@ -6,20 +6,45 @@
   "seoTitle": "Sacolas para comércio e supermercado | GAMA Embalagens",
   "seoDescription": "Conheça as opções de sacolas comercializadas pela GAMA Embalagens. Envie medida, apresentação e quantidade para receber uma cotação.",
   "description": "Encontre as opções de sacolas comercializadas pela GAMA. Envie sua necessidade de medida, apresentação e quantidade para cotação.",
-  "segments": ["supermercados", "comercio", "hortifruti", "alimentacao"],
+  "segments": [
+    "supermercados",
+    "comercio",
+    "hortifruti",
+    "alimentacao"
+  ],
   "images": [
     {
-      "src": null,
-      "alt": "Sacolas plásticas"
+      "src": "/produtos/sacolas.webp",
+      "alt": "Sacola plástica branca tipo camiseta, sem impressão"
     }
   ],
   "variants": [],
   "specSchema": [
-    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
-    { "key": "altura_cm", "label": "Altura", "unit": "cm" },
-    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
-    { "key": "cor", "label": "Cor", "unit": null },
-    { "key": "unidades_por_fardo", "label": "Unidades por fardo", "unit": "un" }
+    {
+      "key": "largura_cm",
+      "label": "Largura",
+      "unit": "cm"
+    },
+    {
+      "key": "altura_cm",
+      "label": "Altura",
+      "unit": "cm"
+    },
+    {
+      "key": "espessura_micra",
+      "label": "Espessura",
+      "unit": "micra"
+    },
+    {
+      "key": "cor",
+      "label": "Cor",
+      "unit": null
+    },
+    {
+      "key": "unidades_por_fardo",
+      "label": "Unidades por fardo",
+      "unit": "un"
+    }
   ],
   "supplyUnit": null,
   "material": null,
@@ -31,5 +56,8 @@
     "Qual volume de compra por período?"
   ],
   "faq": [],
-  "related": ["bobina-fundo-estrela", "filme-pvc"]
+  "related": [
+    "bobina-fundo-estrela",
+    "filme-pvc"
+  ]
 }
