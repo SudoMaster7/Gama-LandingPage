@@ -7,6 +7,8 @@
     "build": "node scripts/gerar-produtos.mjs && next build",
     "start": "next start",
     "produtos": "node scripts/gerar-produtos.mjs",
+    "fotos": "python scripts/verificar-fotos.py",
+    "fotos:preparar": "python scripts/preparar-fotos.py",
     "lint": "eslint",
     "test": "node --experimental-strip-types --test tests/quote.test.ts"
   },

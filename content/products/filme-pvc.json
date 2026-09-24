@@ -6,19 +6,39 @@
   "seoTitle": "Filme PVC para alimentos e comércio | GAMA Embalagens",
   "seoDescription": "Consulte as especificações do filme PVC da GAMA Embalagens. Informe largura, apresentação e quantidade para solicitar uma cotação.",
   "description": "Consulte as especificações do filme PVC e confirme a compatibilidade com o uso pretendido. Informe largura, apresentação e quantidade desejadas.",
-  "segments": ["supermercados", "alimentacao", "hortifruti"],
+  "segments": [
+    "supermercados",
+    "alimentacao",
+    "hortifruti"
+  ],
   "images": [
     {
-      "src": null,
-      "alt": "Rolo de filme PVC transparente"
+      "src": "/produtos/filme-pvc.webp",
+      "alt": "Rolo de filme PVC ao lado de bandejas de tomate e alface vedadas com o filme"
     }
   ],
   "variants": [],
   "specSchema": [
-    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
-    { "key": "comprimento_m", "label": "Comprimento", "unit": "m" },
-    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
-    { "key": "rolos_por_caixa", "label": "Rolos por caixa", "unit": "un" }
+    {
+      "key": "largura_cm",
+      "label": "Largura",
+      "unit": "cm"
+    },
+    {
+      "key": "comprimento_m",
+      "label": "Comprimento",
+      "unit": "m"
+    },
+    {
+      "key": "espessura_micra",
+      "label": "Espessura",
+      "unit": "micra"
+    },
+    {
+      "key": "rolos_por_caixa",
+      "label": "Rolos por caixa",
+      "unit": "un"
+    }
   ],
   "supplyUnit": null,
   "material": null,
@@ -30,5 +50,8 @@
     "Quantas unidades por pedido?"
   ],
   "faq": [],
-  "related": ["filme-stretch", "bobina-fundo-estrela"]
+  "related": [
+    "filme-stretch",
+    "bobina-fundo-estrela"
+  ]
 }

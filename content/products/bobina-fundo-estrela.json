@@ -6,19 +6,39 @@
   "seoTitle": "Bobina fundo estrela | GAMA Embalagens",
   "seoDescription": "Consulte as opções de bobina fundo estrela da GAMA Embalagens. Informe medida, quantidade e aplicação para solicitar uma cotação.",
   "description": "Consulte as opções de bobina fundo estrela da GAMA. Informe medida, quantidade e aplicação para verificar a opção disponível para seu negócio.",
-  "segments": ["supermercados", "hortifruti", "comercio"],
+  "segments": [
+    "supermercados",
+    "hortifruti",
+    "comercio"
+  ],
   "images": [
     {
-      "src": null,
-      "alt": "Bobina de fundo estrela"
+      "src": "/produtos/bobina-fundo-estrela.webp",
+      "alt": "Bobina de saco picotado com fundo estrela ao lado de sacos fechados com frutas e pães"
     }
   ],
   "variants": [],
   "specSchema": [
-    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
-    { "key": "altura_cm", "label": "Altura", "unit": "cm" },
-    { "key": "espessura_micra", "label": "Espessura", "unit": "micra" },
-    { "key": "unidades_por_bobina", "label": "Unidades por bobina", "unit": "un" }
+    {
+      "key": "largura_cm",
+      "label": "Largura",
+      "unit": "cm"
+    },
+    {
+      "key": "altura_cm",
+      "label": "Altura",
+      "unit": "cm"
+    },
+    {
+      "key": "espessura_micra",
+      "label": "Espessura",
+      "unit": "micra"
+    },
+    {
+      "key": "unidades_por_bobina",
+      "label": "Unidades por bobina",
+      "unit": "un"
+    }
   ],
   "supplyUnit": null,
   "material": null,
@@ -30,5 +50,8 @@
     "Qual quantidade deseja por pedido?"
   ],
   "faq": [],
-  "related": ["sacolas", "filme-pvc"]
+  "related": [
+    "sacolas",
+    "filme-pvc"
+  ]
 }

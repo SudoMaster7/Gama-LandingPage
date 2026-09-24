@@ -45,3 +45,6 @@ next-env.d.ts
 
 # indice de produtos gerado por scripts/gerar-produtos.mjs
 content/products.generated.ts
+
+# originais pesados das fotos (guardados so na maquina)
+public/produtos/_originais/
