@@ -1,0 +1,40 @@
+{
+  "_como_usar": "Copie este arquivo para content/products/ com o nome do slug (ex.: saco-lixo.json), apague esta linha e preencha. Campo sem informação confirmada fica null ou [] — não aparece no site. Manual completo em MANUAL-CONTEUDO.md.",
+
+  "slug": "troque-pelo-slug",
+  "name": "Nome do produto",
+  "family": "Sacos e bobinas",
+  "short": "Uma frase curta para o card do catálogo.",
+  "seoTitle": "Nome do produto para [uso] | GAMA Embalagens",
+  "seoDescription": "Frase que aparece no Google, até 160 caracteres, dizendo o que é e convidando à cotação.",
+  "description": "Parágrafo de abertura da página do produto.",
+
+  "segments": ["supermercados"],
+
+  "images": [
+    {
+      "src": null,
+      "alt": "Descreva o que aparece na foto"
+    }
+  ],
+
+  "specSchema": [
+    { "key": "largura_cm", "label": "Largura", "unit": "cm" },
+    { "key": "altura_cm", "label": "Altura", "unit": "cm" }
+  ],
+
+  "variants": [],
+
+  "supplyUnit": null,
+  "material": null,
+  "applications": [],
+  "limitations": [],
+
+  "quoteQuestions": [
+    "Qual medida você utiliza hoje?",
+    "Qual a quantidade por pedido?"
+  ],
+
+  "faq": [],
+  "related": []
+}
